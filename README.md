@@ -7,7 +7,7 @@ I was creating an AngularJS application for a client when I hit a roadblock. The
 
 ## The reason
 
-All the above mentioned crawlers do not execute javascript. So I was stuck in a rock and a hard place. :(. So the soution I designed was to do a url rewrite for all the requests coming from the above said crawlers to a page generated using PhantomJS. Simple right? but wait. Since I already had html5 type url rewrites set up etc it was pretty cumbersome to write al the URL rewrite logic for IIS. At one point I was not sure how the user agent strings actually looked like. So this project was born.
+All the above mentioned crawlers do not execute javascript. So I was stuck in a rock and a hard place. :(. So the soution I designed was to do a url rewrite for all the requests coming from the above said crawlers to a page generated using PhantomJS. Simple right? but wait. Since I already had html5 type url rewrites set up etc it was pretty cumbersome to write all the URL rewrite logic for IIS. At one point I was not sure how the user agent strings actually looked like. So this project was born.
 
 ## Purpose
 
