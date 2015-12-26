@@ -3,7 +3,7 @@ URL rewrite in IIS after checking user agent.
 
 ##  The problem
 
-I was creating an AngularJS application for a client when I hit a roadblock. The project needed the ability to support fabebook Open Graph properties, pinterest rich pins, stumble upon links, google plus links. All the above were failing. 
+I was creating an AngularJS application for a client when I hit a roadblock. The project needed the ability to support facebook Open Graph properties, pinterest rich pins, stumble upon links, google plus links. All the above were failing. 
 
 ## The reason
 
