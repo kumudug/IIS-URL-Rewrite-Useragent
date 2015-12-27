@@ -33,5 +33,10 @@ namespace URLRewrite.Controllers
         {
             return View();
         }
+
+        public ActionResult Facebook()
+        {
+            return View();
+        }
     }
 }
