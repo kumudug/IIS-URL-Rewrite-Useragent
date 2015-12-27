@@ -42,8 +42,7 @@ namespace URLRewrite.Controllers
 
             using (StreamWriter writer = new StreamWriter(Server.MapPath(filePath), true))
             {
-                writer.WriteLine("Redirected to facebook crawler page on {0} at {1}. Actual url given below", DateTime.Now.ToLongDateString(), DateTime.Now.ToLongTimeString());
-                writer.WriteLine(userAgent);
+                writer.WriteLine("Redirected to facebook crawler page on {0} at {1}. U User agent: {2}. Url: {3}", DateTime.Now.ToLongDateString(), DateTime.Now.ToLongTimeString(), userAgent, Request.Url.ToString());
             }
 
             return View();
