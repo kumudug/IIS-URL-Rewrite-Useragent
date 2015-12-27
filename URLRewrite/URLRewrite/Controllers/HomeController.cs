@@ -9,17 +9,19 @@ namespace URLRewrite.Controllers
 {
     public class HomeController : Controller
     {
+        string filePath = "/App_Data/user_agents.txt";
+
         public ActionResult Index()
         {
             var userAgent = Request.UserAgent;
-            var filePath = Server.MapPath("/App_Data/user_agents.txt");
-            using (StreamWriter writer = new StreamWriter(filePath, true))
+            
+            using (StreamWriter writer = new StreamWriter(Server.MapPath(filePath), true))
             {
-                writer.WriteLine(DateTime.Now.ToLongDateString() + " - " + userAgent);
+                writer.WriteLine(DateTime.Now.ToString() + " - " + userAgent);
             }
 
             //List all the hits received so far
-            var fileContentList = System.IO.File.ReadAllLines(filePath);
+            var fileContentList = System.IO.File.ReadAllLines(Server.MapPath(filePath));
 
             return View(fileContentList);
         }
@@ -36,6 +38,14 @@ namespace URLRewrite.Controllers
 
         public ActionResult Facebook()
         {
+            var userAgent = Request.UserAgent;
+
+            using (StreamWriter writer = new StreamWriter(Server.MapPath(filePath), true))
+            {
+                writer.WriteLine("Redirected to facebook crawler page on {0} at {1}. Actual url given below", DateTime.Now.ToLongDateString(), DateTime.Now.ToLongTimeString());
+                writer.WriteLine(userAgent);
+            }
+
             return View();
         }
     }

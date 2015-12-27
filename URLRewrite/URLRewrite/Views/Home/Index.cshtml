@@ -9,7 +9,14 @@
     <div class="row">
         @foreach (var item in Model)
         {
-            <div class="col-md-12"><span class="label label-default">@item</span></div>
+            if (item.Contains("Redirec"))
+            {
+                <div class="col-md-12"><span class="label label-primary">@item</span></div>
+            }
+            else
+            {
+                <div class="col-md-12"><span class="label label-default">@item</span></div>
+            }
         }
     </div>
 </div>
