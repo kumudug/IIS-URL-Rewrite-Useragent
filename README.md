@@ -11,4 +11,12 @@ All the above mentioned crawlers do not execute javascript. So I was stuck betwe
 
 ## Purpose
 
-This project is going to help me understand the user agent string that is used by the above mentioned crawlers and how to do url the rewrites for them. 
+This project is going to help me understand the user agent string that is used by the above mentioned crawlers and how to do url the rewrites for them.
+
+## Solution
+
+I have done a URL rewrite for the above mentioned crawlers and have supported and tested the following rich object and schema handling platforms
+
+http://schema.org/
+http://ogp.me/ [facebook]
+https://developers.pinterest.com/docs/rich-pins/overview/ [pinterest]
