@@ -36,13 +36,13 @@ namespace URLRewrite.Controllers
             return View();
         }
 
-        public ActionResult Facebook()
+        public ActionResult Social()
         {
             var userAgent = Request.UserAgent;
 
             using (StreamWriter writer = new StreamWriter(Server.MapPath(filePath), true))
             {
-                writer.WriteLine("Redirected to facebook crawler page on {0} at {1}. U User agent: {2}. Url: {3}", DateTime.Now.ToLongDateString(), DateTime.Now.ToLongTimeString(), userAgent, Request.Url.ToString());
+                writer.WriteLine("Redirected to social crawler page on {0} at {1}. U User agent: {2}. Url: {3}", DateTime.Now.ToLongDateString(), DateTime.Now.ToLongTimeString(), userAgent, Request.Url.ToString());
             }
 
             return View();
